@@ -21,14 +21,13 @@ const Card: React.FC<CardProps> = ({ breed }) => {
       onClick={navigateTo}
       className="cursor-pointer max-w-[250px] border-[1px] border-[#000000] p-4 rounded-md"
     >
-      {breed.image && (
-        <Image
-          src={breed.image.url}
-          alt={breed.name}
-          width={breed.image.width}
-          height={breed.image.height}
-        />
-      )}
+      <Image
+        src={breed?.image.url}
+        alt={breed?.name}
+        width={breed?.image.width}
+        height={breed?.image.height}
+      />
+
       {breed.name}
     </div>
   );
